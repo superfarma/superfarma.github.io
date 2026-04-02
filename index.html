@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="SUPERFARMA LTDA - Farmácia de confiança em Mogi das Cruzes/SP. Produtos farmacêuticos, atendimento de qualidade e compromisso com a sua saúde. Confira nossos horários e endereço.">
+    <meta name="keywords" content="Farmácia, Mogi das Cruzes, Produtos Farmacêuticos, SUPERFARMA, Saúde, Medicamentos, Atendimento">
+    <meta name="author" content="SUPERFARMA LTDA">
+    <meta name="robots" content="index, follow">
+    <!-- Meta tags essenciais para aprovação em plataformas de anúncio (Google Ads) -->
+    <meta name="google-site-verification" content="" /> <!-- Opcional: inserir código de verificação futuro -->
+    <title>SUPERFARMA | Farmácia em Mogi das Cruzes - SP</title>
+    <!-- Google Fonts para tipografia profissional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafc;
+            color: #1f2937;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* container padrão */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* cabeçalho */
+        .header {
+            background: linear-gradient(135deg, #0b5e3c 0%, #1c7e54 100%);
+            color: white;
+            padding: 24px 0 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 6px;
+            font-weight: 400;
+        }
+
+        .contact-header {
+            text-align: right;
+        }
+
+        .contact-header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+
+        .contact-header a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* seção hero */
+        .hero {
+            background: linear-gradient(to right, #eef2f3, #ffffff);
+            padding: 56px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #0a3b2c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #2d3e50;
+            margin-bottom: 24px;
+            max-width: 550px;
+        }
+
+        .badge-cnpj {
+            background: #e9f4ef;
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0b5e3c;
+            margin-bottom: 20px;
+        }
+
+        .hero-info-card {
+            flex: 0.8;
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .info-row i {
+            width: 32px;
+            font-size: 1.4rem;
+            color: #1c7e54;
+        }
+
+        .info-row strong {
+            font-weight: 700;
+            color: #111;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s;
+            margin-top: 12px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128c7e;
+            transform: scale(0.98);
+        }
+
+        /* seção sobre / detalhes legais */
+        .legal-section {
+            background: white;
+            padding: 56px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            text-align: center;
+            color: #1f2f3a;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .legal-card {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 24px;
+            transition: 0.2s;
+            border: 1px solid #eef2f6;
+        }
+
+        .legal-card i {
+            font-size: 2rem;
+            color: #0b5e3c;
+            margin-bottom: 16px;
+        }
+
+        .legal-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .legal-card p, .legal-card address {
+            color: #334155;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        /* horários */
+        .hours-section {
+            background: #f1f5f9;
+            padding: 56px 0;
+        }
+
+        .hours-box {
+            background: white;
+            border-radius: 32px;
+            padding: 32px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+
+        .hours-list {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* mapa fake + localização destacada */
+        .map-section {
+            background: white;
+            padding: 56px 0;
+        }
+
+        .map-container {
+            background: #eef2f3;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.1);
+        }
+
+        .map-placeholder {
+            background: #cbd5e1;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #2c3e2f;
+            font-weight: 500;
+            background-image: url('https://placehold.co/1200x400/e2e8f0/2d6a4f?text=Localização+SUPERFARMA+-+Centro,+Mogi+das+Cruzes');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .map-placeholder .overlay {
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            backdrop-filter: blur(2px);
+        }
+
+        .address-full {
+            padding: 24px;
+            background: #f9f9fb;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* footer */
+        .footer {
+            background: #0f2b21;
+            color: #cfdfd7;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #b9f5e0;
+            text-decoration: none;
+        }
+
+        .footer .cnpj-footer {
+            margin-top: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* responsividade */
+        @media (max-width: 768px) {
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-header {
+                text-align: center;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+        }
+
+        button, a {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Cabeçalho com dados oficiais -->
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <h1>SUPERFARMA</h1>
+            <p>LTDA - ME | Farmácia e Saúde</p>
+        </div>
+        <div class="contact-header">
+            <a href="tel:+551125554444" aria-label="Telefone para contato">
+                <i class="fas fa-phone-alt"></i> (11) 2555-4444
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero com destaque para credibilidade -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <div class="badge-cnpj">
+                <i class="fas fa-check-circle"></i> CNPJ Ativo: 53.722.216/0001-27
+            </div>
+            <h2>Compromisso com sua saúde e bem-estar</h2>
+            <p>Referência em comércio varejista de produtos farmacêuticos em Mogi das Cruzes. Atendimento humanizado, ética e qualidade que você confia.</p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <a href="#contato" class="btn-whatsapp" style="width: auto; background: #0b5e3c;">
+                    <i class="fas fa-store"></i> Conheça a loja
+                </a>
+                <a href="https://wa.me/551125554444?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20a%20farmácia" class="btn-whatsapp" style="width: auto; background: #25d366;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-info-card">
+            <div class="info-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <div><strong>📍 Endereço</strong><br> Rua Doutor Osmar Marinho Couto, 139<br> Centro – Mogi das Cruzes/SP - CEP: 08730-500</div>
+            </div>
+            <div class="info-row">
+                <i class="fas fa-envelope"></i>
+                <div><strong>📧 E-mail oficial</strong><br> atendimento@superfarma.com.br</div>
+            </div>
+            <div class="info-row">
+                <i class="fas fa-clock"></i>
+                <div><strong>🕗 Funcionamento</strong><br> Segunda a Sexta: 08h às 20h | Sábado: 08h às 18h<br>Domingos e feriados: 09h às 13h</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de informações legais e institucionais (essencial para Google Ads) -->
+<section class="legal-section">
+    <div class="container">
+        <h2 class="section-title">Dados oficiais da empresa</h2>
+        <div class="legal-grid">
+            <div class="legal-card">
+                <i class="fas fa-building"></i>
+                <h3>Razão Social</h3>
+                <p>SUPERFARMA LTDA - ME</p>
+                <p><strong>CNPJ:</strong> 53.722.216/0001-27</p>
+                <p><strong>Situação Cadastral:</strong> ATIVA</p>
+                <p><strong>Data de abertura:</strong> 30/01/2024</p>
+            </div>
+            <div class="legal-card">
+                <i class="fas fa-briefcase-medical"></i>
+                <h3>Atividade Principal</h3>
+                <p><strong>CNAE:</strong> 4771-7/00 – Comércio varejista de produtos farmacêuticos, sem manipulação de fórmulas.</p>
+                <p style="margin-top: 12px;">Autorização sanitária e funcionamento regular junto à vigilância sanitária municipal.</p>
+            </div>
+            <div class="legal-card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Matriz / Endereço Fiscal</h3>
+                <address>
+                    Rua Doutor Osmar Marinho Couto, 139<br>
+                    Centro, Mogi das Cruzes - SP<br>
+                    CEP: 08730-500<br>
+                    <i class="fas fa-phone-alt" style="font-size: 0.9rem; margin-top: 8px; display: inline-block;"></i> Telefone: (11) 2555-4444
+                </address>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Horário de funcionamento + contato reforçado -->
+<section class="hours-section">
+    <div class="container">
+        <div class="hours-box">
+            <i class="fas fa-calendar-alt" style="font-size: 2.5rem; color: #1c7e54;"></i>
+            <h3 style="margin: 16px 0 8px;">Horário de Funcionamento</h3>
+            <p>Atendimento presencial e suporte por telefone/WhatsApp</p>
+            <div class="hours-list">
+                <div class="hour-item"><span>Segunda a Sexta</span> <strong>08:00 – 20:00</strong></div>
+                <div class="hour-item"><span>Sábado</span> <strong>08:00 – 18:00</strong></div>
+                <div class="hour-item"><span>Domingos e Feriados</span> <strong>09:00 – 13:00</strong></div>
+            </div>
+            <div style="margin-top: 24px;">
+                <a href="tel:+551125554444" style="background: #0b5e3c; color: white; padding: 12px 24px; border-radius: 40px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600;"><i class="fas fa-phone"></i> Ligue agora: (11) 2555-4444</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Localização detalhada e link para rotas (Google Maps) -->
+<section class="map-section" id="contato">
+    <div class="container">
+        <h2 class="section-title">Nossa localização</h2>
+        <div class="map-container">
+            <div class="map-placeholder">
+                <div class="overlay">
+                    <i class="fas fa-map-pin" style="font-size: 2rem;"></i>
+                    <p>Rua Doutor Osmar Marinho Couto, 139 - Centro, Mogi das Cruzes/SP</p>
+                </div>
+            </div>
+            <div class="address-full">
+                <p><i class="fas fa-directions"></i> <strong>Acesse facilmente pelo centro da cidade.</strong> Estacionamento nas proximidades. Venha nos visitar ou peça pelo nosso serviço de retirada rápida.</p>
+                <a href="https://www.google.com/maps/search/Rua+Doutor+Osmar+Marinho+Couto,+139,+Mogi+das+Cruzes,+SP/@-23.5245,-46.1885,17z" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 12px; background: #1f6392; color: white; padding: 8px 18px; border-radius: 30px; text-decoration: none; font-size: 0.9rem;"><i class="fab fa-google"></i> Abrir no Google Maps</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de confiabilidade: política de privacidade / termos para anúncios e informações adicionais -->
+<section class="legal-section" style="background: #f9fafc; padding-top: 24px;">
+    <div class="container">
+        <div class="legal-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px,1fr));">
+            <div class="legal-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Segurança e conformidade</h3>
+                <p>Empresa regularizada, CNPJ ativo e em conformidade com as normas da Anvisa para comércio farmacêutico. Produtos originais e armazenamento adequado.</p>
+            </div>
+            <div class="legal-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Atendimento personalizado</h3>
+                <p>Nossos farmacêuticos estão prontos para esclarecer dúvidas sobre medicamentos isentos de prescrição e cuidados com a saúde.</p>
+            </div>
+            <div class="legal-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Meios de pagamento</h3>
+                <p>Aceitamos cartões de crédito, débito, PIX e dinheiro. Facilidade para sua compra segura e rápida.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer com dados complementares e direitos -->
+<footer class="footer">
+    <div class="container">
+        <p><strong>SUPERFARMA LTDA - ME</strong> | CNPJ: 53.722.216/0001-27</p>
+        <p>Rua Doutor Osmar Marinho Couto, 139 - Centro, Mogi das Cruzes/SP - CEP 08730-500</p>
+        <p>📞 Telefone: (11) 2555-4444 | ✉️ atendimento@superfarma.com.br</p>
+        <div class="cnpj-footer">
+            <i class="fas fa-check-circle" style="font-size: 0.7rem;"></i> Situação cadastral: ATIVA | Abertura: 30/01/2024
+        </div>
+        <hr style="margin: 20px auto; width: 80px; border-color: #2f5e4c;">
+        <p style="font-size: 0.75rem;">© 2025 SUPERFARMA LTDA. Todos os direitos reservados. As informações aqui contidas são de caráter institucional e comercial, em conformidade com as diretrizes do Google Ads para operações comerciais.</p>
+    </div>
+</footer>
+
+<!-- Botão flutuante de whatsapp opcional para conversão (aumenta confiança) -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+    <a href="https://wa.me/551125554444?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20atendimento" style="background: #25d366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.2s;" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
+    </a>
+</div>
+
+<!-- Schema.org JSON-LD para negócio local (melhora aprovação e SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "SUPERFARMA LTDA",
+  "alternateName": "Superfarma Farmácia",
+  "description": "Comércio varejista de produtos farmacêuticos em Mogi das Cruzes, com atendimento de qualidade e compromisso ético.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Doutor Osmar Marinho Couto, 139",
+    "addressLocality": "Mogi das Cruzes",
+    "addressRegion": "SP",
+    "postalCode": "08730-500",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-23.5245",
+    "longitude": "-46.1885"
+  },
+  "url": "https://www.superfarma.com.br",
+  "telephone": "+551125554444",
+  "email": "atendimento@superfarma.com.br",
+  "openingHours": [
+    "Mo-Fr 08:00-20:00",
+    "Sa 08:00-18:00",
+    "Su 09:00-13:00"
+  ],
+  "priceRange": "$$",
+  "legalName": "SUPERFARMA LTDA - ME",
+  "taxID": "53.722.216/0001-27",
+  "foundingDate": "2024-01-30",
+  "sameAs": []
+}
+</script>
+
+</body>
+</html>
